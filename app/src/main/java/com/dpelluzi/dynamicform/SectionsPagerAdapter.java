@@ -26,6 +26,10 @@ public class SectionsPagerAdapter extends FragmentPagerAdapter {
 
     @Override
     public Fragment getItem(int position) {
+        if (position == SECTION_FORM) {
+            return FormFragment.newInstance();
+        }
+
         return new Fragment(); // TODO replace with correct fragment
     }
 
