@@ -51,7 +51,7 @@ public abstract class FieldValidator {
 
     private static class PhoneFieldValidator extends FieldValidator {
 
-        private static final String PHONE_PATTERN = "\\d{2}\\s\\d{4,5}\\-\\d{4}";
+        private static final String PHONE_PATTERN = "\\(\\d{2}\\)\\s\\d{4,5}\\-\\d{4}";
 
         @Override
         public boolean validate(String input) {

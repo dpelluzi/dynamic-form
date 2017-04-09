@@ -3,7 +3,6 @@ package com.dpelluzi.dynamicform.view;
 import android.content.Context;
 import android.support.design.widget.TextInputEditText;
 import android.support.design.widget.TextInputLayout;
-import android.telephony.PhoneNumberFormattingTextWatcher;
 import android.text.InputType;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,6 +13,7 @@ import android.widget.TextView;
 
 import com.dpelluzi.dynamicform.R;
 import com.dpelluzi.dynamicform.models.Cell;
+import com.dpelluzi.dynamicform.util.PhoneNumberFormatter;
 
 public class CellViewConverter {
 
@@ -83,7 +83,7 @@ public class CellViewConverter {
         TextInputEditText textInput = (TextInputEditText) inputLayout.findViewById(R.id.text_input);
         textInput.setInputType(getKeyboardType(cell.getTypeField()));
         if (cell.getTypeField() == Cell.FieldType.TEL_NUMBER) {
-            textInput.addTextChangedListener(new PhoneNumberFormattingTextWatcher());
+            textInput.addTextChangedListener(new PhoneNumberFormatter(textInput));
         }
 
         return inputLayout;
