@@ -1,10 +1,12 @@
-package com.dpelluzi.dynamicform;
+package com.dpelluzi.dynamicform.view;
 
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+
+import com.dpelluzi.dynamicform.R;
 
 public class MainActivity extends AppCompatActivity {
 

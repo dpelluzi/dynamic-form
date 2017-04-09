@@ -1,9 +1,11 @@
-package com.dpelluzi.dynamicform;
+package com.dpelluzi.dynamicform.view;
 
 import android.content.Context;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
+
+import com.dpelluzi.dynamicform.R;
 
 /**
  * A {@link FragmentPagerAdapter} that returns a fragment corresponding to
