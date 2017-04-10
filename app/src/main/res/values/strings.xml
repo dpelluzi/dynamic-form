@@ -13,4 +13,6 @@
     <string name="month">No mês</string>
     <string name="year">No ano</string>
     <string name="last12months">12 meses</string>
+    <string name="download">Baixar</string>
+    <string name="invest">Investir</string>
 </resources>

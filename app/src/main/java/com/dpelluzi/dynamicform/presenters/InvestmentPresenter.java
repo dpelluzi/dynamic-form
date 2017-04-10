@@ -3,6 +3,10 @@ package com.dpelluzi.dynamicform.presenters;
 import com.dpelluzi.dynamicform.interfaces.InvestmentContract;
 import com.dpelluzi.dynamicform.models.Fund;
 import com.dpelluzi.dynamicform.models.FundData;
+import com.dpelluzi.dynamicform.models.Info;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class InvestmentPresenter implements InvestmentContract.Presenter {
 
@@ -16,12 +20,12 @@ public class InvestmentPresenter implements InvestmentContract.Presenter {
 
     @Override
     public void onViewCreated() {
-          mView.bindData(mFund);
-//        mView.setTitle(mFund.getTitle());
-//        mView.setFundName(mFund.getFundName());
-//        mView.setWhatIs(mFund.getWhatIs());
-//        mView.setDefinition(mFund.getDefinition());
-//        mView.setRiskTitle(mFund.getRiskTitle());
-//        mView.setInfoTitle(mFund.getInfoTitle());
+        mView.bindData(mFund);
+
+        List<Info> infoList = new ArrayList<>();
+        infoList.addAll(mFund.getInfo());
+        infoList.addAll(mFund.getDownInfo());
+
+        mView.setInfoList(infoList);
     }
 }
