@@ -4,4 +4,6 @@
     <color name="colorPrimaryDark">#6da1df</color>
     <color name="colorAccent">#f5a623</color>
     <color name="divisor">#cfcfcf</color>
+    <color name="graph_cdi">#00c8b3</color>
+    <color name="graph_fund">#4d4289</color>
 </resources>

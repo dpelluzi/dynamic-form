@@ -80,6 +80,35 @@
                     android:text="@{fund.definition}"
                     tools:text="Definition Lorem Ipsum."/>
 
+                <com.jjoe64.graphview.GraphView
+                    android:id="@+id/graph"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:layout_marginTop="8dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/graph_cdi"
+                        android:text="@string/cdi"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/graph_fund"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginStart="12dp"
+                        android:text="@{fund.fundName}"
+                        tools:text="Fund Name Lorem Ipsum"/>
+
+                </LinearLayout>
+
                 <TextView
                     android:id="@+id/text_risk_title"
                     android:layout_width="wrap_content"

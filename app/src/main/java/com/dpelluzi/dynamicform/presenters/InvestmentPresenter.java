@@ -22,6 +22,8 @@ public class InvestmentPresenter implements InvestmentContract.Presenter {
     public void onViewCreated() {
         mView.bindData(mFund);
 
+        mView.setupGraph(mFund.getGraph());
+
         List<Info> infoList = new ArrayList<>();
         infoList.addAll(mFund.getInfo());
         infoList.addAll(mFund.getDownInfo());
