@@ -29,7 +29,7 @@ public class Profitability {
         this.year = year;
     }
 
-    public Incoming get12months() {
+    public Incoming getLast12months() {
         return last12months;
     }
 

@@ -56,6 +56,12 @@
                     android:text="@{fund.fundName}"
                     tools:text="Fund Name Lorem Ipsum"/>
 
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="24dp"
+                    android:background="@color/divisor"/>
+
                 <TextView
                     android:id="@+id/text_what_is"
                     android:layout_width="wrap_content"
@@ -92,6 +98,125 @@
                     android:textStyle="bold"
                     android:text="@{fund.infoTitle}"
                     tools:text="More info title"/>
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="16dp">
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <android.support.v4.widget.Space
+                            android:layout_weight="2"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="end"
+                            android:text="@string/fund"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="end"
+                            android:layout_weight="1"
+                            android:text="@string/cdi"/>
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:text="@string/month"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="end"
+                            android:textColor="@android:color/black"
+                            android:text='@{fund.moreInfo.month.fund + "%"}'
+                            tools:text="4.5%"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="end"
+                            android:textColor="@android:color/black"
+                            android:text='@{fund.moreInfo.month.cdi + "%"}'
+                            tools:text="13.5%"/>
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:text="@string/year"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="end"
+                            android:textColor="@android:color/black"
+                            android:text='@{fund.moreInfo.year.fund + "%"}'
+                            tools:text="4.5%"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="end"
+                            android:textColor="@android:color/black"
+                            android:text='@{fund.moreInfo.year.cdi + "%"}'
+                            tools:text="13.5%"/>
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:text="@string/last12months"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="end"
+                            android:textColor="@android:color/black"
+                            android:text='@{fund.moreInfo.last12months.fund + "%"}'
+                            tools:text="4.5%"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="end"
+                            android:textColor="@android:color/black"
+                            android:text='@{fund.moreInfo.last12months.cdi + "%"}'
+                            tools:text="13.5%"/>
+                    </TableRow>
+                </TableLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="24dp"
+                    android:background="@color/divisor"/>
 
             </LinearLayout>
 

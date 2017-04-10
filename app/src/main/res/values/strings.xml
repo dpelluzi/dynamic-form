@@ -8,4 +8,9 @@
     <string name="thank_you">Obrigado!</string>
     <string name="message_success_sent">Mensagem enviada com sucesso :)</string>
     <string name="send_new_message">Enviar nova mensagem</string>
+    <string name="fund">Fundo</string>
+    <string name="cdi">CDI</string>
+    <string name="month">No mês</string>
+    <string name="year">No ano</string>
+    <string name="last12months">12 meses</string>
 </resources>

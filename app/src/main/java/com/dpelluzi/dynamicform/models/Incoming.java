@@ -8,7 +8,7 @@ public class Incoming {
     private float fund;
 
     @SerializedName("CDI")
-    private float cDI;
+    private float cdi;
 
     public float getFund() {
         return fund;
@@ -18,12 +18,12 @@ public class Incoming {
         this.fund = fund;
     }
 
-    public float getCDI() {
-        return cDI;
+    public float getCdi() {
+        return cdi;
     }
 
-    public void setCDI(float cDI) {
-        this.cDI = cDI;
+    public void setCdi(float cdi) {
+        this.cdi = cdi;
     }
 
 }
