@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="fund"
+            type="com.dpelluzi.dynamicform.models.Fund"/>
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin">
+
+        <TextView
+            android:id="@+id/text_screen_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:text="@string/title_investment"
+            android:textAppearance="?android:attr/textAppearanceLarge"/>
+
+        <android.support.v4.widget.NestedScrollView
+            android:id="@+id/scroll_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text_screen_title">
+
+            <LinearLayout
+                android:id="@+id/view_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/text_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:textStyle="bold"
+                    android:text="@{fund.title}"
+                    tools:text="Title"/>
+
+                <TextView
+                    android:id="@+id/text_fund_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+                    android:text="@{fund.fundName}"
+                    tools:text="Fund Name Lorem Ipsum"/>
+
+                <TextView
+                    android:id="@+id/text_what_is"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:textStyle="bold"
+                    android:text="@{fund.whatIs}"
+                    tools:text="What is"/>
+
+                <TextView
+                    android:id="@+id/text_definition"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@{fund.definition}"
+                    tools:text="Definition Lorem Ipsum."/>
+
+                <TextView
+                    android:id="@+id/text_risk_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:textColor="@color/colorPrimary"
+                    android:textStyle="bold"
+                    android:text="@{fund.riskTitle}"
+                    tools:text="Risk title"/>
+
+                <TextView
+                    android:id="@+id/text_info_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:textColor="@color/colorPrimary"
+                    android:textStyle="bold"
+                    android:text="@{fund.infoTitle}"
+                    tools:text="More info title"/>
+
+            </LinearLayout>
+
+        </android.support.v4.widget.NestedScrollView>
+
+    </RelativeLayout>
+
+</layout>
