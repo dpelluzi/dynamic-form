@@ -2,13 +2,13 @@ package com.dpelluzi.dynamicform.view;
 
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
-import android.support.v4.view.ViewPager;
+import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 
 import com.dpelluzi.dynamicform.R;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements TabLayout.OnTabSelectedListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,14 +18,31 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        SectionsPagerAdapter mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager(), this);
-
-        ViewPager mViewPager = (ViewPager) findViewById(R.id.container);
-        mViewPager.setAdapter(mSectionsPagerAdapter);
-
         TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
-        tabLayout.setupWithViewPager(mViewPager);
+        tabLayout.addTab(tabLayout.newTab().setText(R.string.title_investment), true);
+        tabLayout.addTab(tabLayout.newTab().setText(R.string.title_contact));
+        tabLayout.addOnTabSelectedListener(this);
+    }
 
+    @Override
+    public void onTabSelected(TabLayout.Tab tab) {
+        Fragment fragment;
+        if (tab.getPosition() == 0) {
+            fragment = new Fragment(); // TODO replace with correct fragment
+        } else {
+            fragment = FormFragment.newInstance();
+        }
+        getSupportFragmentManager().beginTransaction()
+                .replace(R.id.container, fragment, "Content")
+                .commit();
+    }
+
+    @Override
+    public void onTabUnselected(TabLayout.Tab tab) {
+    }
+
+    @Override
+    public void onTabReselected(TabLayout.Tab tab) {
     }
 
 }

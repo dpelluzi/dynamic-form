@@ -5,4 +5,7 @@
     <string name="title_contact">Contato</string>
     <string name="title_investment">Investimento</string>
     <string name="invalid_field">Campo inválido</string>
+    <string name="thank_you">Obrigado!</string>
+    <string name="message_success_sent">Mensagem enviada com sucesso :)</string>
+    <string name="send_new_message">Enviar nova mensagem</string>
 </resources>

@@ -9,7 +9,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.CheckBox;
 import android.widget.LinearLayout;
-import android.widget.Toast;
 
 import com.dpelluzi.dynamicform.R;
 import com.dpelluzi.dynamicform.interfaces.FormContract;
@@ -126,7 +125,9 @@ public class FormFragment extends Fragment implements FormContract.View, View.On
 
     @Override
     public void startSuccessScreen() {
-        Toast.makeText(getContext(), "Success", Toast.LENGTH_SHORT).show(); // TODO replace with fragment
+        mViewContainer.removeAllViews();
+        getChildFragmentManager().beginTransaction()
+                .replace(R.id.view_container, new SuccessFragment(), "SuccessFragment").commit();
     }
 
 }
