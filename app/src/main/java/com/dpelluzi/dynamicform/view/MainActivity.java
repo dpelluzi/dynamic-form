@@ -22,13 +22,17 @@ public class MainActivity extends AppCompatActivity implements TabLayout.OnTabSe
         tabLayout.addTab(tabLayout.newTab().setText(R.string.title_investment), true);
         tabLayout.addTab(tabLayout.newTab().setText(R.string.title_contact));
         tabLayout.addOnTabSelectedListener(this);
+
+        getSupportFragmentManager().beginTransaction()
+                .add(R.id.container, InvestmentFragment.newInstance(), "Content")
+                .commit();
     }
 
     @Override
     public void onTabSelected(TabLayout.Tab tab) {
         Fragment fragment;
         if (tab.getPosition() == 0) {
-            fragment = new Fragment(); // TODO replace with correct fragment
+            fragment = InvestmentFragment.newInstance();
         } else {
             fragment = FormFragment.newInstance();
         }
